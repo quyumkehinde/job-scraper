@@ -1,6 +1,6 @@
 # Job Scraper
 
-A python script to find out availability of job positions at companies of choice.
+A python script to find out availability of job positions at companies of your choice.
 
 ## Usage Guide
 
@@ -9,6 +9,11 @@ A python script to find out availability of job positions at companies of choice
 - Add positions you'd love to check by modifying the [positions.json](positions.json) file. You can add as many positions as you want.
 - *(Skip if you have the Mozilla Firefox browser installed)* Open [scraper.py](scraper.py), on line 9, replace ```Firefox``` with your preferred browser (either ``Chrome`` or ```Safari```)
 - Run ``bash ./run.sh``
+
+## TODO
+
+- Make app available via API.
+- Add ability to automatically generate keywords based on position.
 
 ## Contribution Guide
 
