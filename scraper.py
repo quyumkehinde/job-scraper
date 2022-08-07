@@ -1,6 +1,5 @@
 import json
 from selenium import webdriver
-from bs4 import BeautifulSoup as soup
 
 data = json.load(open('positions.json'))
 response = []
