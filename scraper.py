@@ -29,4 +29,4 @@ for i in range(len(data)):
 output = open('output.json', 'w')
 json.dump(response, output, indent=2)
 
-print('Open output.json to view result')
+print('\n Open output.json to view result')
