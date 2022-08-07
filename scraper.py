@@ -8,11 +8,11 @@ response = []
 for i in range(len(data)):
     driver = webdriver.Firefox()
     driver.get(data[i]['url'])
-    content = soup(driver.page_source, 'html.parser')
+    content = driver.page_source.lower()
     status = 'Not Found'
     found_keyword = ''
     for j in range(len(data[i]['keywords'])):
-        if data[i]['keywords'][j] in content:
+        if data[i]['keywords'][j].lower() in content:
             status = 'Found'
             found_keyword = data[i]['keywords'][j]
             break
@@ -25,3 +25,5 @@ for i in range(len(data)):
     response.append(result)
 output = open('output.json', 'w')
 json.dump(response, output, indent=2)
+
+print('Open output.json to view result')
