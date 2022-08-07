@@ -1,11 +1,15 @@
 import json
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 
 data = json.load(open('positions.json'))
 response = []
 
+options = Options()
+options.headless = True
+driver = webdriver.Firefox(options=options)
+
 for i in range(len(data)):
-    driver = webdriver.Firefox()
     driver.get(data[i]['url'])
     content = driver.page_source.lower()
     status = 'Not Found'
